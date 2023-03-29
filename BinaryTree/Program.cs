@@ -8,7 +8,7 @@
             tree.Add(56);
             tree.Add(30);
             tree.Add(70);
-            tree.TraversePreorder(tree.Root);
+             tree.TraversePreorder(tree.Root);
 
         }
     }
