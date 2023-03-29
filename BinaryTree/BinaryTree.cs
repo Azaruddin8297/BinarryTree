@@ -50,6 +50,10 @@ namespace BinaryTree
 
             return true;
         }
+        public BinaryTree()
+        {
+            Root = null;
+        }
         public void TraversePreorder(Node parent)
         {
             if (parent != null)
@@ -57,6 +61,31 @@ namespace BinaryTree
                 Console.WriteLine(parent.Data + " ");
                 TraversePreorder(parent.leftNode);
                 TraversePreorder(parent.rightNode);
+            }
+        }
+        public Node Search(int value)
+        {
+            return Search(Root, value);
+        }
+
+        private Node Search(Node node, int value)
+        {
+            if (node == null || node.Data == value)
+            {
+                return node;
+                
+            }
+            else if (node.Data > value)
+            {
+
+                return Search(node.leftNode, value);
+
+                
+            }
+            else
+            {
+                return Search(node.rightNode, value);
+                
             }
         }
     }

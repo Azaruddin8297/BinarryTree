@@ -19,6 +19,15 @@
             tree.Add(63);
             tree.Add(67);
             tree.TraversePreorder(tree.Root);
+            Node node1 = tree.Search(67);
+            if (node1 != null)
+            {
+                Console.WriteLine("Node {0} found!",node1.Data);
+            }
+            else
+            {
+                Console.WriteLine("Node {0} not found ",node1.Data);
+            }
 
         }
     }
